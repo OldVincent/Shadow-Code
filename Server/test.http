@@ -1,0 +1,78 @@
+﻿GET http://localhost:80/api/item?id=99
+Accept: application/json
+
+### 测试注册
+GET https://shadowcode.azurewebsites.net/api/user_register
+Content-Type: application/json
+
+{
+  "name": "马志强",
+  "password": "shadowcode",
+  "identity": "1909060111",
+  "device": "D06FC44E-1223-2B66-DBCF-F50AB4C94BDA"
+}
+
+### 测试登录
+POST https://shadowcode.azurewebsites.net/api/user_login
+Content-Type: application/json
+
+{
+  "name": "贾浩宇",
+  "password": "shadowcode",
+  "device": "D06FC44E-1223-2B66-DBCF-F50AB4C94BDA"
+}
+
+### 测试本机登录
+POST http://localhost:7071/api/user_login
+Content-Type: application/json
+
+{
+  "name": "贾浩宇",
+  "password": "shadowcode",
+  "device": "D06FC44E-1223-2B66-DBCF-F50AB4C94BDA"
+}
+
+### 测试登出
+POST https://shadowcode.azurewebsites.net/api/user_logout
+Content-Type: application/json
+
+{
+  "id": 1,
+  "device": "D06FC44E-1223-2B66-DBCF-F50AB4C94BDA"
+}
+
+### 测试本机登出
+POST http://localhost:7071/api/user_logout
+Content-Type: application/json
+
+{
+  "id": 1,
+  "device": "D06FC44E-1223-2B66-DBCF-F50AB4C94BDA"
+}
+
+### 测试本机查询
+POST http://localhost:7071/api/query_risk_by_id
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+### 测试本机更新
+POST http://localhost:7071/api/update_risk
+Content-Type: application/json
+
+{
+  "id": 5,
+  "risk": 4
+}
+
+### 测试本机更新
+POST https://shadowcode.azurewebsites.net/api/update_risk
+Content-Type: application/json
+
+{
+  "id": 5,
+  "risk": 4
+}
+

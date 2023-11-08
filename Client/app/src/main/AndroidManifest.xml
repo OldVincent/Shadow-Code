@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="edu.upc.shadowcode">
+    <!-- 依赖于蓝牙低功耗功能 -->
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
+    <!-- 忽略电池优化，保持在后台活跃 -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!-- 息屏状态下依然能够运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 蓝牙扫描：Android 12 及以上版本的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH" />
+    <!-- 蓝牙扫描：10 开始需要精确位置权限 -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.ACCESS_BACKGROUND_LOCATION"
+        android:maxSdkVersion="30" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:name=".Controller"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.ShadowCode">
+
+        <activity
+            android:name=".views.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".services.AdvertiserService" />
+        <service android:name=".services.ScannerService" />
+        <service android:name=".services.RecorderService" />
+        <service android:name=".services.UpdaterService" />
+    </application>
+
+
+
+</manifest>

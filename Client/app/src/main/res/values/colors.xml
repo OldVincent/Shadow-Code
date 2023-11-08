@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#006DCC</color>
+    <color name="link">#0088CC</color>
+    <color name="info">#49AFCD</color>
+    <color name="green">#5BB75B</color>
+    <color name="orange">#FAA732</color>
+    <color name="red">#DA4F49</color>
+    <color name="black">#363636</color>
+    <color name="blue">#0088CC</color>
+
+    <color name="white">#FCFAF2</color>
+    <color name="white_back">#FCFAF2</color>
+    <color name="white_uneditable_back">#FBFBFB</color>
+    <color name="gray_restrict">#EFF3F8</color>
+    <color name="gray_reference">#DEDEDE</color>
+    <color name="gray_text">#6E6E6E</color>
+    <color name="white_text">#F5F5F5</color>
+    <color name="black_guide">#363636</color>
+    <color name="black_text">#2A2A2A</color>
+
+    <color name="floatingBackground">@color/background_floating_material_light</color>
+    <color name="sunkBackground">@color/background_material_light</color>
+
+    <!--业务数据-->
+    <color name="risk_low">@color/green</color>
+    <color name="risk_medium">@color/orange</color>
+    <color name="risk_high">@color/red</color>.
+    <color name="risk_danger">@color/black</color>
+    <color name="risk_unknown">@color/blue</color>
+</resources>

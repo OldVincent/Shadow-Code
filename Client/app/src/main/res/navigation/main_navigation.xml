@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/view_index">
+
+    <fragment
+        android:id="@+id/view_index"
+        android:name="edu.upc.shadowcode.views.IndexFragment"
+        android:label="fragment_index"
+        tools:layout="@layout/fragment_index" />
+    <fragment
+        android:id="@+id/view_identity"
+        android:name="edu.upc.shadowcode.views.SettingFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/view_scanner"
+        android:name="edu.upc.shadowcode.views.ScannerFragment"
+        android:label="ScannerFragment" />
+</navigation>
